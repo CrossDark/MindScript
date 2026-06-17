@@ -14,42 +14,36 @@
 #show: template
 
 // 页面主标题（一级标题）
-= 跨越晨昏
+= MindScript 意识脚本
 
-// --- 侧注示例：图片 ---
-// margin-note 将内容显示在页面右侧边距中
-#kych.margin-note({
-  // 雌性凤头潜鸭和幼鸭
-  image("imgs/tufted-duck-female-with-duckling.webp")
-  // 雄性凤头潜鸭
-  image("imgs/tufted-duck-male.webp")
-})
+== 简介
 
-// --- 侧注示例：文字 ---
-// 关于凤头潜鸭 (Tufted Duck) 的趣味科普
-#kych.margin-note[
-  凤头潜鸭（_Aythya fuligula_）是一种原产于欧亚大陆的中型潜水鸭。以其潜水能力著称，可以潜入极深的水域觅食。
-]
+本项目是一个新型脚本语言
 
-// --- Markdown 嵌入区域 ---
-  // 注意：此页面内容是从 README.md 文件自动生成的
-#{
-  // 读取项目根目录的 README.md 文件内容
-  let md-content = read("../README.md")
-  // 移除一级标题（README 中的 "# 跨越晨昏"），因为页面上方已经显示了标题
-  let md-content = md-content.trim(regex("\s*#.+?\n")) // 移除一级标题
+=== 与传统脚本语言*python,shell等*的区别:
 
-  // 使用 cmarker 将 Markdown 渲染为 Typst 内容
-  // scope 参数允许自定义 Markdown 中图片的渲染方式
-  cmarker.render(
-    md-content,
-    scope: (
-      // 重定义 Markdown 图片语法 ![]() 的处理方式
-      image: (source, alt: none, format: auto) => figure(image(
-        "../" + source, // 调整图片路径：Markdown 文件在根目录，图片在 template/imgs/
-        alt: alt,        // 无障碍替代文本
-        format: format,  // 图片格式（自动检测）
-      )),
-    ),
-  )
-}
+1. 运行方便: 本语言运行在人类大脑中,无需电子设备
+2. 载体多样: 除了使用网页和电子文件,本语言还兼容传统纸质媒介
+3. 配置简单: 本语言*意识到即运行*,无需进行复杂的启动和配置
+
+=== 与传统人类语言的区别:
+
+1. 确定性: 拥有代码的确定性,无论运行环境都会产生确定的结果,且耗时同样确定
+2. 强制性: 一旦意识到代码即强制运行,无拒绝风险
+
+=== 本语言独有优势
+
+1. 安全性: 无论载体如何,本语言都只能通过解析器意识到,未安装解析器则无法发现代码
+2. 保护性: 解析器拥有自我保护功能,可防止任何形式的卸载
+
+== 安装
+
+阅读至此,本语言已经自动安装,若失败您可#link("网页已被拦截", "网页已被拦截"),若网页安装失败,您可以#link("在此留下邮箱", "在此留下邮箱"),我们将为您发送安装邮件
+
+== 探索
+
+您可前往#link("MSHub/", "MSHub")探索更多MindScript脚本和项目
+
+== 开发
+
+您需要安装#link("MSDK/", "MSDK")来开发MindScript脚本,MSDK提供了一整套开发环境来帮助您编写和测试脚本,以及通过各种媒介进行发布

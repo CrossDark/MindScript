@@ -26,9 +26,9 @@
   // 导航栏链接配置：每个元素为 (路径, 显示名称)
   header-links: (
     "/": "首页",
-    "/docs/": "文档",
-    "/blog/": "博客",
-    "/cv/": "简历",
+    "/论坛/": "论坛",
+    "/MSDK/": "MSDK",
+    "/MSHub/": "MSHub",
   ),
-  title: "跨越晨昏",
+  title: "MindScript 意识脚本",
 )
